@@ -1,7 +1,3 @@
-# hello-world
-Hello World repository for Git tutorial
-This is an example repository for the Git tutoial on https://www.w3schools.com
+# algorithm_codingtest
 
-This repository is built step by step in the tutorial.
-
-change test
+algorithm_codingtest를 연습하고 분석하는 공간입니다
