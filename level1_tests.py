@@ -15,7 +15,7 @@ a	b	return
 5	3	12
 '''
 
-def solution(a, b):
+def solution1(a, b):
     answer = 0
     if b > a:
         for i in range(a,b+1):
@@ -41,7 +41,7 @@ n	return
 4	"수박수박"
 '''
 
-def solution(n):
+def solution2(n):
     answer = ''
     for i in range(n):
         if i % 2 == 0:
@@ -65,7 +65,7 @@ seoul	return
 ["Jane", "Kim"]	"김서방은 1에 있다"
 '''
 
-def solution(seoul):
+def solution3(seoul):
     k = 0    
     answer = ''
     for i in seoul:
@@ -96,7 +96,7 @@ n	return
 입출력 예 #2
 5의 약수는 1, 5입니다. 이를 모두 더하면 6입니다.
 '''
-def solution(n):
+def solution4(n):
     answer = 0
     for i in range(1,n+1):
         if n % i == 0:
@@ -118,7 +118,7 @@ s	return
 "qwer"	"we"
 '''
 
-def solution(s):
+def solution5(s):
     a = len(s) // 2
     
     if len(s) % 2 == 0:
@@ -144,7 +144,7 @@ x는 -10000000 이상, 10000000 이하인 정수입니다.
 n은 1000 이하인 자연수입니다.
 '''
 
-def solution(x, n):
+def solution6(x, n):
     answer = []
     for i in range(n):
         a = x*(i+1)
@@ -153,6 +153,62 @@ def solution(x, n):
     return answer
 
 
-            
+
+'''
+평균 구하기
+문제 설명
+정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.
+
+제한사항
+arr은 길이 1 이상, 100 이하인 배열입니다.
+arr의 원소는 -10,000 이상 10,000 이하인 정수입니다.
+입출력 예
+arr	return
+[1,2,3,4]	2.5
+[5,5]	5
+'''
+
+# arr = [1,2,3,4]
+def solution7(arr):
+    # count=0
+    # for i in arr:
+    #     count += i
+    # answer = count/len(arr)
+
+    answer = sum(arr,0.0)/len(arr)
+
+    print(answer)
+    return answer
+
+'''
+행렬의 덧셈
+문제 설명
+행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다. 2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
+
+제한 조건
+행렬 arr1, arr2의 행과 열의 길이는 500을 넘지 않습니다.
+입출력 예
+arr1	arr2	return
+[[1,2],[2,3]]	[[3,4],[5,6]]	[[4,6],[7,9]]
+[[1],[2]]	[[3],[4]]	[[4],[6]]
+'''
+arr1 = [[1,2],[2,3]]
+arr2 = [[3,4],[5,6]]
+def solution8(arr1,arr2):
+    answer = []
+    for i,j in zip(arr1, arr2):
+        answer.append([x+y for x,y in (zip(i,j))])
+    print(answer)    
+    return answer
+        
 
 
+if __name__=="__main__":
+    # solution1()
+    # solution2()
+    # solution3()
+    # solution4()
+    # solution5()
+    # solution6()
+    # solution7(arr)
+    solution8(arr1, arr2)
