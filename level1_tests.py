@@ -200,6 +200,32 @@ def solution8(arr1,arr2):
         answer.append([x+y for x,y in (zip(i,j))])
     print(answer)    
     return answer
+
+'''
+짝수와 홀수
+문제 설명
+정수 num이 짝수일 경우 "Even"을 반환하고 홀수인 경우 "Odd"를 반환하는 함수, solution을 완성해주세요.
+
+제한 조건
+num은 int 범위의 정수입니다.
+0은 짝수입니다.
+입출력 예
+num	return
+3	"Odd"
+4	"Even"
+'''
+
+num = 4
+def solution9(num):
+    if num % 2 == 0:
+        answer = "Even"
+    else:
+        answer = "Odd"
+    return answer
+
+
+
+    
         
 
 
@@ -211,4 +237,6 @@ if __name__=="__main__":
     # solution5()
     # solution6()
     # solution7(arr)
-    solution8(arr1, arr2)
+    # solution8(arr1, arr2)
+    solution9(num)
+

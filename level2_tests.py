@@ -24,7 +24,7 @@ s	answer
 
 s = "pPoooyY"
 
-def solution(s):       
+def solution1(s):       
     b = 0
     c = 0 
     for i in range(len(s)):
@@ -64,7 +64,7 @@ arr	answer
 
 import collections  # deque 사용하기 위해서 선언
 
-def solution(arr):
+def solution2(arr):
     dequearr = collections.deque(arr) # 속도를 위하여 arr을 deque타입으로 바꿔줬음
     newarr = []
     behind_num = 10
@@ -88,12 +88,46 @@ def solution(arr):
 별(*) 문자를 이용해 가로의 길이가 n, 세로의 길이가 m인 직사각형 형태를 출력해보세요.
 '''
 
+def solution3():
+    a, b = map(int, input().strip().split(' '))
+    for i in range(b):
+        print('*'*a)
 
-a, b = map(int, input().strip().split(' '))
-for i in range(b):
-    print('*'*a)
 
-    
+'''
+자릿수 더하기
+문제 설명
+자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.
+예를들어 N = 123이면 1 + 2 + 3 = 6을 return 하면 됩니다.
 
+제한사항
+N의 범위 : 100,000,000 이하의 자연수
+입출력 예
+N	answer
+123	6
+987	24
+입출력 예 설명
+입출력 예 #1
+문제의 예시와 같습니다.
+
+입출력 예 #2
+9 + 8 + 7 = 24이므로 24를 return 하면 됩니다.
+'''
+
+n=123
+def solution4(n):
+    answer =0
+    for i in str(n):
+        answer += int(i)
+    print(answer)
+    return answer
+
+
+
+if __name__=="__main__":
+    # solution1()
+    # solution2()
+    # solution3()
+    solution4(n)
 
 
